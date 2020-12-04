@@ -1,0 +1,500 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap'); 
+
+
+:root {
+    --black: #000;
+    --white: #fff;
+    --cyan: hsl(180, 66%, 49%);
+    --darkViolet: hsl(257, 27%, 26%);
+    --gray:hsl(0, 0%, 75%);
+    --grayishViolet: hsl(257, 7%, 63%);
+    --VeryDarkBlue: hsl(255, 11%, 22%);
+    --veryDarkViolet: hsl(260, 8%, 14%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+    font-size: 10px;
+    background-color: var(--gray);
+}
+.main {
+    position: relative;
+    width: 100%;
+}
+.main::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 650px;
+    background-color: white;
+    z-index: -1;
+}
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.upperDiv {
+    margin: auto;
+    width: 80%;
+    height: auto;
+    background-color: var(--white);
+}
+
+.navbar {
+    padding: 20px 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar .list_1, .navbar .list_2 {
+    width: 30%;
+    list-style: none;
+}
+.navbar .list_1 a, .navbar .list_2 a {
+    text-decoration: none;
+    color: var(--grayishViolet);
+}
+.navbar .list_1 {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    font-size: 1.2em;
+}
+.navbar .list_1 .tag {
+    color: var(--black);
+    font-size: 2.5em;
+    font-weight: bolder;
+}
+.navbar .list_1 .tag a{
+    color: var(--black);
+}
+.navbar .list_2 {
+    width: 15%;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    font-size: 1.5em;
+    font-weight: bolder;
+}
+.signup {
+    background-color: var(--cyan);
+    width: 100%;
+    padding: 8px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+.navbar .list_2 .signup a {
+    color: var(--white);
+}
+
+.headContent {
+    margin-top: 20px;
+    position: relative;
+    display: flex;
+}
+.basicInfo {
+    width: 45%;
+}
+.basicInfo h1 {
+    font-size: 6em;
+    margin-top: 30px;
+}
+.basicInfo p {
+    color: var(--grayishViolet);
+    margin-top: 10px;
+    font-size: 1.8em;
+}
+.basicInfo .but {
+    margin-top: 30px;
+    width: 30%;
+    font-size: 1.5em;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: var(--cyan);
+    font-weight: bolder;
+    color: var(--white);
+    cursor: pointer;
+}
+.img {
+    width: 50%;
+}
+.img img {
+    margin-left: 10%;
+    width: 100%;
+    height: 100%;
+}
+
+.urlShort {
+    margin-top: 50px;
+    padding: 60px;
+    background: url(./images/bg-shorten-desktop.svg);
+    background-size: cover;
+    background-color: var(--darkViolet);
+    border-radius: 5px;
+}
+
+.urlShort input {
+    height: 40px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+}
+.urlShort .input {
+    width: 74%;
+    padding-left: 10px;
+    font-size: 1.5em;
+}
+.urlShort .input::placeholder {
+    font-size: 1em;
+}
+.urlShort .button {
+    font-weight: bolder;
+    font-size: 1.5em;
+    color: var(--white);
+    background-color: var(--cyan);
+    cursor: pointer;
+    margin-left: 5%;
+    width: 20%;
+}
+
+.middleDiv {
+    width: 80%;
+    margin: auto;
+    position: relative;
+}
+.hor {
+    top: 60%;
+    width: 100%;
+    border-top: 10px solid var(--cyan);
+    position: absolute;
+}
+.middleDiv .midHead {
+    width: 30%;
+    margin: 100px auto 40px;
+}
+.midHead h1 {
+    text-align: center;
+    font-size: 3em;
+}
+.midHead p {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 1.2em;
+    color: var(--grayishViolet);
+}
+
+.grids {
+    display: flex;
+    margin-bottom: 100px;
+}
+.grid1 img, .grid2 img, .grid3 img {
+    position: absolute;
+    top: -40px;
+    border: 15px solid var(--darkViolet);
+    border-radius: 50%;
+    height: 70px;
+    width: 70px;
+    background-color: var(--darkViolet);
+}
+.grid1, .grid2, .grid3 {
+    border-radius: 5px;
+    padding: 30px;
+    position: relative;
+    height: 300px;
+    background-color: var(--white);
+}
+.grid1 h1, .grid2 h1, .grid3 h1 {
+    margin-top: 40px;
+    font-size: 3em;
+}
+.grid1 {
+    margin-right: 10px;
+}
+.grid2 {
+    margin: 0 10px;
+    margin-top: 50px;
+}
+.grid3 {
+    margin-left: 10px;
+    margin-top: 100px;
+}
+.grid1 p, .grid2 p, .grid3 p {
+    font-size: 1.5em;
+    color: var(--grayishViolet);
+}
+
+.lowerDiv {
+    width: 100%;
+    border: 1px solid black;
+    text-align: center;
+    padding: 50px 0;
+    background: url(./images/bg-boost-desktop.svg);
+    background-size: cover;
+    background-color: var(--darkViolet);
+}
+.lowerDiv h1 {
+    font-size: 5em;
+    color: var(--white);
+}
+.lowerDiv p {
+    margin: 30px auto;
+    width: 10%;
+    font-size: 1.5em;
+    border-radius: 20px;
+    background-color: var(--cyan);
+    padding: 10px 0;
+    font-weight: bolder;
+    color: var(--white);
+    cursor: pointer;
+}
+
+.footer {
+    width: 100%;
+    border: 1px solid black;
+    display: grid;
+    grid-template-columns: 4fr 6fr 3fr;
+    background-color: var(--veryDarkViolet);
+    color: var(--white);
+}
+.footer .tag {
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bolder;
+    font-size: 1.5em;
+}
+.lists {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+}
+.lists .list1 ul, .lists .list2 ul, .lists .list3 ul {
+    height: 100%;
+    font-size: 1.2em;
+}
+.lists .list1 li, .lists .list2 li, .lists .list3 li {
+    margin: 10px 0;
+}
+.lists .list1 .head, .lists .list2 .head, .lists .list3 .head {
+    font-weight: bolder;
+    margin: 20px 0;
+}
+.icons {
+    margin-top: 25px;
+}
+.icons i {
+    margin: 0 10px;
+}
+
+.attribution {
+    text-align: center;
+}
+
+@media(max-width: 1500px) {
+
+    .main::before {
+        height: 600px;
+    }
+
+    .navbar .list_1 {
+        width: 50%;
+        font-size: 1em;
+    }
+    .navbar .list_2 {
+        width: 20%;
+        font-size: 1em;
+    }
+
+    .basicInfo h1 {
+        font-size: 5em;
+    }
+    .basicInfo p {
+        font-size: 1.8em;
+    }
+    .basicInfo .but {
+        width: 35%;
+        font-size: 1.5em;
+    }
+
+    .midHead h1 {
+        font-size: 2.5em;
+    }
+    .midHead p {
+        font-size: 1.1em;
+    }
+    .grid1, .grid2, .grid3 {
+        height: 250px;
+    }
+    .grid1 h1, .grid2 h1, .grid3 h1 {
+        font-size: 2em;
+    }
+    .grid1 p, .grid2 p, .grid3 p {
+        font-size: 1em;
+    }
+}
+
+@media(max-width: 1000px) {
+
+    .main::before {
+        height: 500px;
+    }
+
+    .basicInfo h1 {
+        font-size: 3em;
+    }
+    .basicInfo p {
+        font-size: 1.5em;
+    }
+    .basicInfo .but {
+        font-size: 1em;
+    }
+
+    .middleDiv .midHead {
+        width: 40%;
+    }
+    .midHead h1 {
+        font-size: 2em;
+    }
+    .midHead p {
+        font-size: 1em;
+    }
+    .grid1, .grid2, .grid3 {
+        height: 250px;
+    }
+    .grid1 h1, .grid2 h1, .grid3 h1 {
+        font-size: 1.6em;
+    }
+    .grid1 p, .grid2 p, .grid3 p {
+        font-size: 1em;
+    }
+
+    .lowerDiv h1 {
+        font-size: 4em;
+    }
+    .lowerDiv p {
+        font-size: 1em;
+    }
+    .lists .list1 li, .lists .list2 li, .lists .list3 li {
+        font-size: 0.8em;
+    }
+    .icons i img {
+        width: 10%;
+    }
+}
+
+@media(max-width: 700px) {
+
+    .main::before {
+        height: 800px;
+    }
+
+    .navbar .list_1 {
+        width: 60%;
+        font-size: 0.8em;
+    }
+    .navbar .list_2 {
+        width: 30%;
+        font-size: 0.8em;
+    }
+
+    .headContent {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .basicInfo {
+        grid-row: 2/3;
+        text-align: center;
+        width: 100%;
+    }
+    .basicInfo h1 {
+        font-size: 3em;
+        margin-top: 30px;
+    }
+    .basicInfo p {
+        font-size: 1.5em;
+    }
+    .basicInfo .but {
+        margin: 20px auto 10px;
+        width: 20%;
+        font-size: 1em;
+    }
+    .img {
+        grid-row: 1/2;
+        padding-left: 0;
+        width: 100%;
+    }
+    .img img {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .urlShort {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .urlShort .input {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .urlShort .button {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .middleDiv .midHead {
+        width: 60%;
+        margin-bottom: 70px;
+        font-size: 1.2em;
+    }
+    .middleDiv .midHead h1 {
+        font-size: 1.5em;
+    }
+    .hor {
+        display: none;
+    }
+    .grids {
+        display: flex;
+        flex-direction: column;
+        font-size: 1.2em;
+    }
+    .grid1 {
+        margin-right: 0px;
+    }
+    .grid2 {
+        margin: 0 0;
+        margin-top: 50px;
+    }
+    .grid3 {
+        margin-left: 0px;
+        margin-top: 50px;
+    }
+
+    .lowerDiv h1 {
+        font-size: 3em;
+    }
+    .lowerDiv p{
+        width: 20%;
+        font-size: 1em;
+    }
+    .footer {
+        grid-template-columns: 1fr;
+    }
+    .lists {
+        font-size: 1.2em;
+        text-align: center;
+        grid-template-columns: 1fr;
+    }
+    .icons {
+        text-align: center;
+    }
+    .icons i img {
+        width: 20px;
+    }
+}
