@@ -19,6 +19,7 @@
 }
 
 body {
+    position: relative;
     width: 100%;
     font-family: 'Poppins', sans-serif;
     font-size: 10px;
@@ -294,7 +295,36 @@ body {
 }
 
 .attribution {
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
     text-align: center;
+}
+.central {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5em;
+    background-color: var(--veryDarkViolet);
+}
+
+.vanish {
+    animation: van 3s linear;
+}
+
+@keyframes van {
+    from {
+        opacity: 1;
+        z-index: 1;
+    } 
+    to {
+        opacity: 0;
+        z-index: -1;
+        display: none;
+    }
 }
 
 @media(max-width: 1500px) {
@@ -337,6 +367,9 @@ body {
     }
     .grid1 p, .grid2 p, .grid3 p {
         font-size: 1em;
+    }
+    .central {
+        font-size: 4em;
     }
 }
 
@@ -386,6 +419,9 @@ body {
     }
     .icons i img {
         width: 10%;
+    }
+    .central {
+        font-size: 2em;
     }
 }
 
@@ -497,4 +533,24 @@ body {
     .icons i img {
         width: 20px;
     }
+    .central {
+        font-size: 1.5em;
+    }
 }
+
+@media(max-width: 400px) {
+
+    .navbar .list_1 {
+        width: 60%;
+        font-size: 0.6em;
+    }
+    .navbar .list_2 {
+        width: 30%;
+        font-size: 0.6em;
+    }
+
+    .central {
+        font-size: 1.2em;
+    }
+}
+
