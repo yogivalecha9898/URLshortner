@@ -327,6 +327,10 @@ body {
     }
 }
 
+.navbar-ham {
+    display: none;
+}
+
 @media(max-width: 1500px) {
 
     .main::before {
@@ -428,16 +432,89 @@ body {
 @media(max-width: 700px) {
 
     .main::before {
-        height: 800px;
+        height: 740px;
+    }
+    .navbar {
+        display: none;
     }
 
-    .navbar .list_1 {
-        width: 60%;
-        font-size: 0.8em;
+    .navbar-ham {
+        position: relative;
+        display: flex;
+        overflow: hidden;
+        align-items: center;
     }
-    .navbar .list_2 {
-        width: 30%;
-        font-size: 0.8em;
+
+    .ham {
+        position: absolute;
+        width: 10%;
+        height: 25%;
+        top: 50%;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        cursor: pointer;
+        z-index: 1;
+    }
+
+    .ham-but {
+        width: 100%;
+    }
+    .ham-but::before, .ham-but::after {
+        content: "";
+        position: absolute;
+        border-top: 5px solid black;
+        width: 100%;
+    }
+    .ham-but::before {
+        transform: translateY(-15px);
+        transition: transform 0.2s linear;
+    }
+    .ham-but::after {
+        transform: translateY(4px);
+        transition: transform 0.2s linear;
+    }
+    .ham.down .ham-but::before {
+        transform: rotate(45deg) translate(-4px, -4px);
+    }
+    .ham.down .ham-but::after {
+        transform: rotate(-45deg) translate(4px, -4px);
+    }
+    .navbar-ham .list_1 {
+        width: 50%;
+        font-size: 2.5em;
+        font-weight: bolder;
+        list-style: none;
+    }
+    .navbar-ham .list_1 a {
+        text-decoration: none;
+        color: black;
+    }
+    .navbar-ham .list_2 {
+        z-index: 1;
+        top: 0;
+        height: 50px;
+        background-color: white;
+        position: absolute;
+        width: 90%;
+        transform: translateX(100%);
+        list-style: none;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        font-size: 1em;
+        opacity: 0;
+        transition: transform 0.2s linear;
+    }
+
+    .navbar-ham .list_2 a {
+        text-decoration: none;
+    }
+
+    .navbar-ham .list_2.back {
+        transform: translateX(0);
+        opacity: 1;
     }
 
     .headContent {
@@ -459,7 +536,7 @@ body {
     .basicInfo .but {
         margin: 20px auto 10px;
         width: 20%;
-        font-size: 1em;
+        font-size: 0.8em;
     }
     .img {
         grid-row: 1/2;
@@ -542,11 +619,24 @@ body {
 
     .navbar .list_1 {
         width: 60%;
-        font-size: 0.6em;
+        font-size: 0.5em;
     }
     .navbar .list_2 {
         width: 30%;
-        font-size: 0.6em;
+        font-size: 0.5em;
+    }
+
+    .basicInfo .but {
+        width: 30%;
+        font-size: 0.8em;
+    }
+
+    .main::before {
+        height: 700px;
+    }
+
+    .ham {
+        top: 60%;
     }
 
     .central {
