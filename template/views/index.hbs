@@ -7,7 +7,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
   <title>Frontend Mentor | Shortly URL shortening API Challenge</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./css/style.css">
 </head>
 <body onload="gayab()">
   <div class="attribution">
@@ -57,10 +57,13 @@
           <img src="./images/illustration-working.svg" alt="work">
         </div>
       </div>
-      <div class="urlShort">
-        <input type="text" class="input" placeholder="Shorton a link here...">
-        <input type="submit" class="button" value="Shorten it!">
-      </div>
+      <form class="urlShort">
+        <input placeholder="example.com" id="url" class="input">
+        <button id="submit" class="button">Submit</button>
+      </form>
+      <div id="link1"></div>
+      <div id="link2"></div>
+      <div id="link3"></div>
     </div>
 
     <div class="middleDiv">
@@ -132,6 +135,6 @@
       </div>
     </div>
   </div>
-  <script src="app.js"></script>
+  <script src="./script/app.js"></script>
 </body>
 </html>
